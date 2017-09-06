@@ -10,12 +10,27 @@
 //}
 //
 //$fullName = fullName();
-//echo $fullName;
+////echo $fullName;
+//
+//function firtName($first, $second){
+//	return "the firstname is " . ': ' . $first . ' and the second name is ' . ': ' . $second;
+//}
+//$fullname = firtName('Ahmet', 'Kees');
+//
+//echo $fullname;
 
-function firtName($first, $second){
-	return "the firstname is " . ': ' . $first . ' and the second name is ' . ': ' . $second;
-}
-$fullname = firtName('Ahmet', 'Kees');
+function fullName($firstName, $lastName=null, $seperator = '_'){
+	
+	if(trim($firstName) === '' ){
+		return;
+	}
+	
+	if($lastName === null){
+		
+		return 'Ahmet';
+	}
 
-echo $fullname;
+	return "{$firstName}{$seperator}{$lastName}";
+}  
+echo fullName('Ahmet', 'Sahin');
 ?>
