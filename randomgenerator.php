@@ -13,28 +13,21 @@ $quotes =[
 ];
 
 $quote=$quotes[rand(0,count($quotes)-1)];
-$squoteText= $quote['text'];
-$squoteAuthor= $quote['author'];
-//foreach($quotes as $quote){
-//echo $quote['text']."<br>";
-//echo $quote['author']."<br>";
-//}
-
+$quoteText=$quote['text'];
+$quoteAuthor=$quote['author'];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Random</title>
-	</head>
-	
+<head>
+	<meta charset="UTF-8">
+	<title>random</title>
+</head>
 	<body>
 		<blockquote>
-			<h2 >&ldquo;<?php  echo  $squoteText;?>&rdquo;</h2>
-			<strong >--<?php  echo  $squoteAuthor;?></strong>
+			<h2>&ldquo;<?php echo $quoteText;?>&rdquo;</h2>
+			<strong>---<?php echo $quoteAuthor;?></strong>
 		</blockquote>
 
 	</body>
-	</html>
+</html>
